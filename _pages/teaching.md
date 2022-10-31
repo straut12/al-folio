@@ -14,6 +14,8 @@ nav_order: 5
 
 # H1 this is header 1
 
+<h1>HTML header</h1>
+
 Instructions for different display (/boot/config.txt) or can change to boot
 to 'cli' and run headless with virtual VNC.
 
@@ -42,3 +44,27 @@ Some network commands
 
 	route -n
 	ifconfig
+
+* Low side is idle and high side is using programs.  Numbers are estimated.  
+When working on a solar or battery project need to measure the power usage for that  
+specific pi setup.  Watts (Power) = I (currrent A) x V (voltage)
+
+Notes for RPi4
+- has dual display ports (having 2 screens is nice for working on projects)
+- requires larger power supply and type-C charging cord.
+* Low side is idle and high side is using programs.  Numbers are estimated.  
+When working on a solar or battery project need to measure the power usage for that  
+specific pi setup.  Watts (Power) = I (currrent A) x V (voltage)
+
+Notes for RPi4
+- has dual display ports (having 2 screens is nice for working on projects)
+- requires larger power supply and type-C charging cord.
+* Low side is idle and high side is using programs.  Numbers are estimated.  
+When working on a solar or battery project need to measure the power usage for that  
+specific pi setup.  Watts (Power) = I (currrent A) x V (voltage)
+
+Notes for RPi4
+- has dual display ports (having 2 screens is nice for working on projects)
+- requires larger power supply and type-C charging cord.
+
+## last sub header

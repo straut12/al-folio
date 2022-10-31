@@ -119,7 +119,7 @@ body.sticky-bottom-footer {
  .site-container {
   height: 100vh;
   width: 100vw;
-  //max-width: $max-content-width; // this is from al folio 
+  //max-width: $max-content-width; // this is from al folio in .container. But window was too narrow
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: $base-font-size * 3 + 6px 1fr;
@@ -131,7 +131,7 @@ body.sticky-bottom-footer {
  .site-body {
   display: grid;
   grid-template-columns: calc(#{$content-width} * 0.24) 1fr;
-  overflow: hidden;
+  //overflow: hidden;  // not sure why this was here. was not allowing to scroll to content off the screen
 
   @include media-query($on-medium) {
     grid-template-columns: calc(#{$content-width} * 0.18) 1fr;
