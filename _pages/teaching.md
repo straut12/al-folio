@@ -14,7 +14,7 @@ to 'cli' and run headless with virtual VNC.
 ``` console
 $ Is this code
 $ or is this code
-$ butwhatifihaveareallylonglineofcodeoverandasdfhapuihpapjiofn-u2puhjn;lajnd-23r;jn;alkjnv;akjds;fha;ih432p;oi4n98a-dvhpnjn;ljknfajdlf;ahdsfjasdfa8f-89dn;N:DFLKSja;dsfj
+$ butwhatifihaveareallylonglineofcodeoverandasdfhapuihpapjiofn-u2puhjn;lajnd-23r;jn;alkjnv;akjds;fha;ih432p;oi4n98a-dvhpnjn;ljknfajdlf;ahdsfjasdfa8f-89dn;N:DFLKSja;dsfj  
 ```
 
 Quick summary to help decide which device is best and help when downloading packages.  

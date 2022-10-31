@@ -615,6 +615,9 @@ pre {
     background-color: transparent;
     border-radius: 0;
     padding: 0;
+    max-height: 300px;
+    max-width: 400px;
+    overflow: auto; 
   }
 }
 
@@ -623,7 +626,9 @@ code {
   background-color: var(--global-code-bg-color);
   border-radius: 3px;
   padding: 3px 3px;
-  
+  max-height: 300px;
+  max-width: 400px;
+  overflow: auto;
 }
 
 
