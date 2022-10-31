@@ -23,7 +23,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: $max-content-width;
+  max-width: $max-content-width;  // this was only one from al-folio
 }
 
 // Profile
@@ -32,6 +32,141 @@ body.sticky-bottom-footer {
     width: 100%;
   }
 }
+
+.toc-title {
+  text-align: left;
+  font-weight: normal;
+  border: 1px hidden;
+  border-radius: 0.3em 0.3em 0 0;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.toc-nav {
+  max-height: 70vh;
+  //overflow-y: scroll;
+  border: 1px hidden;
+  border-top: 0px;
+  border-radius: 0 0 0.3em 0.3em;
+
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li a {
+      font-weight: normal;
+      border-bottom: 1px none;
+      padding: 0.5rem;
+    }
+  }
+
+  li ul li a {
+    font-weight: normal;
+    padding-left: 1.25rem;
+  }
+}
+
+/**
+ * Site header
+ */
+ .site-header {
+  border-top: 5px solid;
+  border-bottom: 1px solid;
+  min-height: $base-font-size * 3;
+  line-height: $base-font-size * 3;
+
+  @include media-query($on-small) {
+    display: flex;
+  }
+}
+
+/**
+ * Wrapper
+ */
+ .wrapper {
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+
+  @media screen and (min-width: $on-large) {
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+  }
+}
+
+/**
+ * Site container
+ */
+ .site-container {
+  height: 100vh;
+  width: 100vw;
+  //max-width: $max-content-width; // this is from al folio 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: $base-font-size * 3 + 6px 1fr;
+}
+
+/**
+ * Site body
+ */
+ .site-body {
+  display: grid;
+  grid-template-columns: calc(#{$content-width} * 0.24) 1fr;
+  overflow: hidden;
+
+  @include media-query($on-medium) {
+    grid-template-columns: calc(#{$content-width} * 0.18) 1fr;
+  }
+
+  @include media-query($on-small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**
+ * Site sidebar
+ */
+.site-sidebar {
+  padding: $spacing-unit;
+  //border-right: 1px solid;
+  @include relative-font-size(0.8);
+
+  @include media-query($on-medium) {
+    padding: $spacing-unit / 2;
+    @include relative-font-size(0.6);
+  }
+
+  @include media-query($on-small) {
+    display: none;
+    border-right: none;
+    border-bottom: 1px solid;
+  }
+
+  @media screen and (min-width: $on-small) {
+    display: block !important;
+  }
+}
+
+
 
 // TODO: redefine content layout.
 

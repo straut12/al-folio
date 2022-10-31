@@ -11,34 +11,24 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    
-    {% if page.toc %}
-      <div class="site-container">  <!-- initial al-folio container attrib was too narrow -->
-        <!-- Header -->
-        {%- include header.html %}
-        <!-- Content -->
-        <div class="site-body wrapper"> <!-- removed container and mt-5 attribute (added too much to top margin)-->
-          <aside class="site-sidebar" id="site-sidebar">
-              {% include sidebar-toc.html %}
-          </aside>
-          <main>
-            {{ content }}
-            <!-- Footer -->
-            {%- include footer.html %}
-          </main>
-        </div>
-      </div>
-    {% else %}
+    <div class="site-container">  <!-- initial al-folio container attrib was too narrow -->
       <!-- Header -->
       {%- include header.html %}
-      <!-- Content -->
-      <div class="container mt-5">
-        {{ content }}
-      </div>
-      <!-- Footer -->
-      {%- include footer.html %}
-    {% endif %}
 
+      <!-- Content -->
+      <div class="site-body wrapper"> <!-- removed container and mt-5 attribute (added too much to top margin)-->
+        <aside class="site-sidebar" id="site-sidebar">
+          {% if page.toc %}
+            {% include sidebar-toc.html %}
+          {% endif %}
+        </aside>
+        <main>
+          {{ content }}
+          <!-- Footer -->
+          {%- include footer.html %}
+        </main>
+      </div>
+    </div>
     <!-- JavaScripts -->
     {% include scripts/jquery.html %}
     {% include scripts/bootstrap.html %}
