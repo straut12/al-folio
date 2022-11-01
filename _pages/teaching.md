@@ -20,26 +20,8 @@ $ butwhatifihaveareallylonglineofcodeoverandasdfhapuihpapjiofn-u2puhjn;lajnd-23r
 Quick summary to help decide which device is best and help when downloading packages.  
 
 Syntax highlighting is provided within `<d-code>` tags.
-An example of inline code snippets: `<d-code language="html">let x = 10;</d-code>`.
-For larger blocks of code, add a `block` attribute:
-
-<d-code block language="javascript">
-  var x = 25;
-  function(x) {
-    return x * x;
-  }
-</d-code>
-
-**Note:** `<d-code>` blocks do not look good in the dark mode.
-You can always use the default code-highlight using the `highlight` liquid tag:
-
-{% highlight javascript %}
-var x = 25;
-function(x) {
-  return x * x;
-}
-{% endhighlight %}
-
+    
+    $ sudo apt-get update
 
 All devices below have built in wi-fi.
 
@@ -170,81 +152,6 @@ def update_pipes():
     if pipe_top.right < 0:
         reset_pipes()
 ```
-
-## Python Code Using Liquid Format
-
-{% highlight python linenos %}
-# This is similar to importing functions from your backpack
-import random
-import time
-
-# Initialization - Setting screen size and variables
-WIDTH = 400
-HEIGHT = 708
-GAP = 150
-SPEED = 3
-GRAVITY = 0.3
-FLAP_VELOCITY = -6.5
-
-# Sprites - links to images in your folder
-bird = Actor('flappy_bird/bird1', (75, 200))
-pipe_top = Actor('flappy_bird/top', anchor=('left', 'bottom'))
-pipe_bottom = Actor('flappy_bird/bottom', anchor=('left', 'top'))
-
-# Main game loop
-def update():
-    update_pipes() # Animation function drawing pipes
-    update_bird()  # Game animation/events for flappy bird
-
-# Initial states for flappy bird sprite
-bird.dead = False
-bird.vy = 0
-
-# Function that draws the background and sprites to the screen
-def draw():
-    screen.blit('flappy_bird/background', (0, 0))
-    pipe_top.draw()
-    pipe_bottom.draw()
-    bird.draw()
-
-# Function for flappy bird events
-def update_bird():
-    bird.vy += GRAVITY
-    bird.y += bird.vy
-    bird.x = 75
-    if not bird.dead:
-        if bird.vy < -3:
-            bird.image = 'flappy_bird/bird2'
-        else:
-            bird.image = 'flappy_bird/bird1'
-    if bird.colliderect(pipe_top) or bird.colliderect(pipe_bottom):
-        bird.dead = True
-        bird.image = 'flappy_bird/birddead'
-    if not 0 < bird.y < 720:
-        bird.y = 200
-        bird.dead = False
-        bird.vy = 0
-        reset_pipes()
-
-# Function for flappy bird motion controller
-# Any key press will increase flappy bird Y position
-def on_key_down():
-    if not bird.dead:
-        bird.vy = FLAP_VELOCITY
-
-# Function to create pipes
-def reset_pipes():
-    pipe_gap_y = random.randint(200, HEIGHT - 200)
-    pipe_top.pos = (WIDTH, pipe_gap_y - GAP // 2)
-    pipe_bottom.pos = (WIDTH, pipe_gap_y + GAP // 2)
-
-# Function for pipe motion
-def update_pipes():
-    pipe_top.left -= SPEED
-    pipe_bottom.left -= SPEED
-    if pipe_top.right < 0:
-        reset_pipes()
-{% endhighlight %}
 
 # More Notes for RPi4
 - has dual display ports (having 2 screens is nice for working on projects)
