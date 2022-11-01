@@ -608,16 +608,13 @@ pre {
   border-radius: 6px;
   padding: 6px 12px;
   max-height: 300px;
-  max-width: 550px;
+  max-width: 500px;
   overflow: auto;
   
   pre, code {
     background-color: transparent;
     border-radius: 0;
     padding: 0;
-    max-height: 300px;
-    max-width: 550px;
-    overflow: auto; 
   }
 }
 
@@ -626,9 +623,6 @@ code {
   background-color: var(--global-code-bg-color);
   border-radius: 3px;
   padding: 3px 3px;
-  max-height: 300px;
-  max-width: 550px;
-  overflow: auto;
 }
 
 
