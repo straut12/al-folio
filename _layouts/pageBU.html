@@ -8,16 +8,6 @@ layout: default
             <h1 class="post-title">{{ page.title }}</h1>
             <p class="post-description">{{ page.description }}</p>
           </header>
-
-          
-
-
-          <div class="site-body wrapper">
-            <aside class="site-sidebar" id="site-sidebar">
-              {% if page.toc %}
-                {% include sidebar-toc.html %}
-              {% endif %}
-            </aside>
             <article>
               {{ content }}
             </article>

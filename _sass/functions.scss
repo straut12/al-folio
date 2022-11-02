@@ -7,3 +7,13 @@
 @mixin relative-font-size($ratio) {
   font-size: #{$ratio}rem;
 }
+
+@mixin clearfix {
+  clear: both;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
