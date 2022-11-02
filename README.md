@@ -224,6 +224,8 @@ $ bundle exec jekyll serve
 Now, feel free to customize the theme however you like (don't forget to change the name!).
 After you are done, **commit** your final changes.
 
+There is no blog nav page. To add the blog to the Nav bar update the name in _config.yml blog field
+
 ---
 
 #### Deployment
