@@ -22,11 +22,9 @@
             <aside class="site-sidebar" id="site-sidebar">
                 {% include sidebar-toc.html %}
             </aside>
-            <main>
+            <div>  <!-- initally used a main here -->
               {{ content }}
-              <!-- Footer -->
-              {%- include footer.html %}
-            </main>
+            </div>
           </div>
       {% else %}
         <!-- Content -->

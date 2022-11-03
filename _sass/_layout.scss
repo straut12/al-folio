@@ -286,7 +286,6 @@ body.sticky-bottom-footer {
  */
 .site-sidebar {
   padding: $spacing-unit;
-  //border-right: 1px solid;
   @include relative-font-size(0.8);
 
   @include media-query($on-medium) {
