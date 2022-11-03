@@ -10,4 +10,7 @@ children:
     - title: divider
     - title: starting-up
       permalink: /ref/begcoding/starting-up/
+    - title: divider
+    - title: basics
+      permalink: /ref/begcoding/basics/
 ---
