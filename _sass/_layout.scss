@@ -33,64 +33,6 @@ body.sticky-bottom-footer {
   }
 }
 
-/*
-.toc-title {
-  //mminimal formatting
-  color: #fff;
-  font-size: $type-size-6;  //6 approx .75em (12px)
-  background: var(--global-bg-color);
-  //border-top-left-radius: $border-radius;
-  //border-top-right-radius: $border-radius;
-  //
-  text-align: left;
-  font-weight: normal;
-  border: 1px hidden;
-  border-radius: 0.3em 0.3em 0 0;
-  padding: 0.5rem;
-  margin: 0;
-}
-
-.toc-nav {
-  max-height: 70vh;
-  //overflow-y: scroll;
-  border: 1px hidden;
-  border-top: 0px;
-  border-radius: 0 0 0.3em 0.3em;
-
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  a {
-    display: block;
-
-    &:hover {
-      //text-decoration: none;
-      color: var(--global-text-color);
-    }
-  }
-
-  ul {
-    list-style: none;
-
-    li a {
-      font-weight: normal;
-      border-bottom: 1px none;
-      padding: 0.5rem;
-    }
-  }
-
-  li ul li a {
-    font-weight: normal;
-    padding-left: 1.25rem;
-  }
-} */
-
 /**
  * Site header
  */
@@ -163,20 +105,21 @@ body.sticky-bottom-footer {
 }
 
 .toc {
-  //font-family: $sans-serif-narrow;
-  //color: $gray;  // not sure what this changes
   background-color: var(--global-toc-bg-color); // initial was $background-color
-  border: 1px none var(--global-theme-color);  // initial was $border-color
+  border: 1px solid var(--global-toc-border-color);  // initial was $border-color
   border-radius: $border-radius;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
-  //list-style: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8em;  // initial value of 2em allowed toc to scroll up
+  float: left;
 
   .toc__title {
-    color: var(--global-toc-title-color); // initial was #fff
+    color: var(--global-toc-title-txt-color); // initial was #fff
     font-size: $type-size-5;
     font-weight: bold;
-    background: var(--global-footer-bg-color);  // initial was $primary-color
+    background: var(--global-toc-title-bg-color);  // initial was $primary-color
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -195,64 +138,44 @@ body.sticky-bottom-footer {
   font-size: $type-size-6;
   font-weight: bold;
 
-  //@include breakpoint($large) {
-  //  font-size: $type-size-7;
-  //}
-
   a {
     display: block;
-    //padding: 0.25rem 0.75rem;
-    //color: $muted-text-color;
+    padding: 0.1rem 0.5rem;
+    color: var(--global-toc-txt-color);
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 1px solid var(--global-theme-color);
+    border-bottom: 1px none var(--global-theme-color);
 
     &:hover {
-      color: var(--global-text-color);  // $text-color
+      color: var(--global-hover-color);  // $text-color
     }
   }
 
   li ul > li a {
-    padding-left: 1.25rem;
+    padding-left: 0.25rem;
     font-weight: normal;
   }
 
   li ul li ul > li a {
-    padding-left: 1.75rem;
+    padding-left: 0.75rem;
   }
 
   li ul li ul li ul > li a {
-    padding-left: 2.25rem;
+    padding-left: 1.25rem;
   }
 
   li ul li ul li ul li ul > li a {
-    padding-left: 2.75rem;
+    padding-left: 1.75rem;
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem;
+    padding-left: 2.25rem;
   }
 }
 
-.sidebar__right {
-  margin-bottom: 1em;
-  //font-weight: bold;
-
-//  @include breakpoint($large) {
-//    position: absolute;
-//    top: 0;
-//    right: 0;
-//    width: $right-sidebar-width-narrow;
-//    margin-right: -1 * $right-sidebar-width-narrow;
-//    padding-left: 1em;
-//    z-index: 10;
-
-  &.sticky { // this was inside breakpoint above
-    @include clearfix();
-    position: -webkit-sticky;
-    position: sticky;
-    top: 10em;  // initial value of 2em allowed toc to scroll up
-    float: left;
+.site-sidebar {
+  padding: $spacing-unit;
+  @include clearfix();
 
     .toc {
       .toc__menu {
@@ -260,37 +183,12 @@ body.sticky-bottom-footer {
         max-height: calc(100vh - 7em);
       }
     }
-//  }
-  }
 
-//  @include breakpoint($x-large) {
-//    width: $right-sidebar-width;
-//    margin-right: -1 * $right-sidebar-width;
-//  }
-}
-/*
-.splash .sidebar__right {
-  @include breakpoint($large) {
-    position: relative;
-    float: right;
-    margin-right: 0;
-  }
-
-  @include breakpoint($x-large) {
-    margin-right: 0;
-  }
-}*/
-
-/**
- * Site sidebar
- */
-.site-sidebar {
-  padding: $spacing-unit;
-  @include relative-font-size(0.8);
+  @include relative-font-size(1);
 
   @include media-query($on-medium) {
     padding: $spacing-unit / 2;
-    @include relative-font-size(0.6);
+    @include relative-font-size(0.8);
   }
 
   @include media-query($on-small) {

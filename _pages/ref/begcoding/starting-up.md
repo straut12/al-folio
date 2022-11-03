@@ -1,8 +1,10 @@
 ---
+layout: page
 permalink: /ref/begcoding/starting-up/
-title: "Getting Started with Scratch"
+title: starting-up
+description: Getting Started with Scratch
+nav: false
 toc: true
-toc_sticky: true
 ---
 
 # Header content

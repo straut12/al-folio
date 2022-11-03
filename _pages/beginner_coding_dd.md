@@ -8,6 +8,6 @@ children:
     - title: intro
       permalink: /ref/begcoding/intro/
     - title: divider
-    - title: projects
-      permalink: /projects/
+    - title: starting-up
+      permalink: /ref/begcoding/starting-up/
 ---

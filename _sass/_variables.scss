@@ -69,14 +69,14 @@ $reading-font-family: "Roboto Slab", "Noto Serif SC", "Noto Serif TC" !default;
 $headline-font-family: Roboto, "Noto Sans SC", "Noto Sans TC" !default;
 $code-font-family:  Inconsolata !default;
 $handwriting-font-family: "Dancing Script", "Ma Shan Zheng" !default;
-$base-font-size:    6px !default; // was set to 18 initially
+$base-font-size:    6px !default; // was set to 18 initially. Used in TOC
 $base-line-height:  1.5 !default;
 
 /*
    Typography
    ========================================================================== */
 
-$doc-font-size: 16 !default;
+//$doc-font-size: 16 !default;
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)

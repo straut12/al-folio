@@ -45,9 +45,13 @@ If you're not ready for Python go ahead and give Scratch a try. Have fun with it
 
 Raspberry Pis have an offline version of Scratch already installed or you can go to the web site [scratch](https://scratch.mit.edu/). Create an account and get started with the next sections under **Beginner Coding**
 
-# Example of Game and Animated Scene Created in Scratch
-Have fun with scratch while learning and utilizing good coding practices. Use functions and comments to keep your code organized and you'll be able to create animated scenes.  
-<img src="/assets/img/begcoding/game-example.gif" width="200">  
+# Scratch Example
+Have fun with scratch while learning and utilizing good coding practices. Use functions and comments to keep your code organized and you'll be able to create animated scenes like the one below. [Scratch Tutorials](../../../ref/begcoding/starting-up/)   
+<div class="row">
+    <div class="col-sm-5 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/game-example.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 # Python
 Once you understand basic coding concepts from Scratch you can move on to a text-based language like Python. Python is a typed-programming language that it is very "readable"; meaning the syntax is similar to how you would write something. For example print("hello") will output "hello" to your screen.
@@ -87,7 +91,11 @@ RaspberryPi.org has good tutorials for getting started with original RPi Minecra
 - [Adventures-in-Minecraft github](https://adventuresinminecraft.github.io/)
 - [Blog with Pi-Minecraft stuff](https://www.raspberrypi.com/news/star-wars-episode-3-14-a-new-hope/)  
 
-<img src="/assets/img/begcoding/rpi-minecraft.png" width="800">  
+<div class="row">
+    <div class="col-lg mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/rpi-minecraft.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ## Coding with Pygame Zero
 Other game-oriented, graphical options are Pygame Zero and Pygame. These both have Python modules geared toward graphical games. Pygame Zero is beginner friendly and will help transition from Scratch to Python. Then you can move on to the more advanced Pygame which has more options and documentation.
@@ -99,8 +107,6 @@ And a thorough reference book at [pygame-zero-book](https://electronstudio.githu
 
 Below is an example of Pygame Zero code (Python) for Flappy Bird
 Notice similarity to the game outline used in the Scratch Tutorials  
-
-<img src="/assets/img/begcoding/flappybird.png" width="200">
 - Import - similar to importing functions from your backpack
 - Sprites - img located in your folder
 - Initialization Step
@@ -108,23 +114,48 @@ Notice similarity to the game outline used in the Scratch Tutorials
 - Functions
 	- Flappy bird motion control
 	- ​Pipe animation  
-Code is below  
+
+_(Code is at bottom of page)_
+<div class="row">
+    <div class="col-3 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/flappybird.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 [mu-editor](https://codewith.mu/en/download) download instructions
 Follow [tutorial](https://pygamezero-bird.readthedocs.io/en/latest/) or use the code below with mu-editor in Pygame Zero mode.
-Click and save the 6 img below in a sub directory of the folder you put your game file. (ie /mu_code/img/flappy_bird ). Make sure image names match what you have in your code.  
-
-<img src="/assets/img/begcoding/flappybird1.png" width="50">
-<img src="/assets/img/begcoding/flappybird2.png" width="50">
-<img src="/assets/img/begcoding/flappybird3.png" width="50">
-<img src="/assets/img/begcoding/flappybird4.png" width="50">
-<img src="/assets/img/begcoding/flappybird5.png" width="50">
-<img src="/assets/img/begcoding/flappybird6.png" width="50">
+Click and save the 6 images below in a sub directory of the folder you put your game file. (ie /mu_code/image/flappy_bird ). Make sure image names match what you have in your code.  
+<div class="row">
+    <div class="col-2 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/flappybird1.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-2 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/flappybird2.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-2 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/flappybird3.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-1 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/flappybird4.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-1 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/flappybird5.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-2 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/flappybird6.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ## Coding with Pygame
 Pygame is a step up in complexity from Pygame Zero. You can use the Object Oriented Programming side of Python to make arcade style games. I had fun following the youtube tutorials by [KidsCanCode](http://kidscancode.org/lessons/) to create the games below. They also go into the more advanced game engine Godot (similar to Unity). KidsCanCode is a great resource for learning Python and how to make great looking games.  
-<img src="/assets/img/begcoding/pygame1.gif" width="200">
-<img src="/assets/img/begcoding/pygame2.gif" width="200">
+<div class="row">
+    <div class="col-md mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/pygame1.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-md mt-3 mt-md-0">
+        {% include figure.html path="assets/img/begcoding/pygame2.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ## Code for Pygame Zero Flappy Bird
 ```python
@@ -198,4 +229,6 @@ def update_pipes():
     pipe_bottom.left -= SPEED
     if pipe_top.right < 0:
         reset_pipes()
-```
+```  
+
+===========
