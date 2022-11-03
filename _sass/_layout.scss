@@ -154,6 +154,13 @@ body.sticky-bottom-footer {
 /*
   Table of contents navigation
   ========================================================================== */
+.toc__title {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  //@debug: $sans-serif-narrow;
+  font-size: $type-size-5;
+  font-weight: bold;
+}
 
 .toc {
   //font-family: $sans-serif-narrow;
@@ -163,12 +170,13 @@ body.sticky-bottom-footer {
   border-radius: $border-radius;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
-  list-style: none;
+  //list-style: none;
 
-  .nav__title {
+  .toc__title {
     color: var(--global-toc-title-color); // initial was #fff
     font-size: $type-size-5;
-    background: var(--global-theme-color);  // initial was $primary-color
+    font-weight: bold;
+    background: var(--global-footer-bg-color);  // initial was $primary-color
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -185,6 +193,7 @@ body.sticky-bottom-footer {
   width: 100%;
   list-style: none;
   font-size: $type-size-6;
+  font-weight: bold;
 
   //@include breakpoint($large) {
   //  font-size: $type-size-7;
@@ -198,9 +207,9 @@ body.sticky-bottom-footer {
     line-height: 1.5;
     border-bottom: 1px solid var(--global-theme-color);
 
-  //  &:hover {
-  //    color: var(--global-text-color);  // $text-color
-  //  }
+    &:hover {
+      color: var(--global-text-color);  // $text-color
+    }
   }
 
   li ul > li a {
@@ -221,12 +230,13 @@ body.sticky-bottom-footer {
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }
 
 .sidebar__right {
   margin-bottom: 1em;
+  //font-weight: bold;
 
 //  @include breakpoint($large) {
 //    position: absolute;
@@ -294,7 +304,6 @@ body.sticky-bottom-footer {
     display: block !important;
   }
 }
-
 
 
 // TODO: redefine content layout.

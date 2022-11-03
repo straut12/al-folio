@@ -1,8 +1,8 @@
 ---
 layout: page
-title: submenus
-nav: false
-nav_order: 6
+title: Hardware
+nav: true
+nav_order: 2
 dropdown: true
 children: 
     - title: publications

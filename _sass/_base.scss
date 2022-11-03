@@ -23,14 +23,16 @@ table {
 
 a, table.table a {
   color: var(--global-theme-color);
+  font-weight: normal;
   &:hover {
-    color: var(--global-theme-color);
+    color: var(--global-hover-color);
+    font-weight: bold;
     text-decoration: underline;
   }
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
   }
-}
+} 
 
 figure, img {
   max-width: 90vw;

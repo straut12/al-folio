@@ -1,12 +1,12 @@
 ---
 layout: page
-title: beginner coding
+title: Beginner-Coding
 nav: true
 nav_order: 1
 dropdown: true
 children: 
-    - title: publications
-      permalink: /publications/
+    - title: intro
+      permalink: /ref/begcoding/intro/
     - title: divider
     - title: projects
       permalink: /projects/
